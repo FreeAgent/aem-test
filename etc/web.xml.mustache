@@ -11,7 +11,7 @@
   {{#services}}
   <servlet>
     <servlet-name>{{svcname}}</servlet-name>
-    <servlet-class>{{name}}.{{class}}</servlet-class>
+    <servlet-class>{{snake_case_name}}.{{class}}</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>{{svcname}}</servlet-name>
