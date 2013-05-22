@@ -1,9 +1,9 @@
 aem-test
 ========
 
-A web-app for use in testing Appengine-Magic (the Clojure library for App Engine)
+A web-app for use in testing [Appengine-Magic](https://github.com/gcv/appengine-magic), the Clojure library for App Engine.
 
-[`aem-test` deployed on App Engine](http://aem-test.appspot.com)
+[`aem-test`](http://aem-test.appspot.com) deployed on App Engine.
 
 
 ## Installation
@@ -31,6 +31,15 @@ FIXME: listing of options this app accepts.
 ### Any Other Sections
 ### That You Think
 ### Might be Useful
+
+## Credits
+
+The original developer of the App Engine Magic library is: <a href="https://github.com/gcv">Constantine Vetoshev</a> &#124
+                
+- 'AE' image by [bluekdesign]("http://www.flickr.com/photos/bluekdesign/")
+- 'M' image by [chelsea.parker.photo]("http://www.flickr.com/photos/chelseaparkerphotography/")
+- 'Test' image by [DaveBleasdale]("http://www.flickr.com/photos/sidelong/")
+
 
 ## License
 
