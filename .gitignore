@@ -16,3 +16,5 @@ pom.xml.asc
 
 core
 .DS_store
+*.swp
+war

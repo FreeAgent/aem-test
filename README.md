@@ -1,24 +1,22 @@
 aem-test
 ========
 
-A web-app for use in testing [Appengine-Magic](https://github.com/gcv/appengine-magic), the Clojure library for App Engine.
+A web app for use in testing [Appengine-Magic](https://github.com/gcv/appengine-magic), the Clojure library for App Engine.
 
-[`aem-test`](http://aem-test.appspot.com) deployed on App Engine.
+[`aem-test`](http://aem-test.appspot.com) is deployed on the Google Cloud Platform.
 
 
 ## Installation
 
-Download from http://example.com/FIXME.
+...
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar aem-test-0.1.0-standalone.jar [args]
+...
 
 ## Options
 
-FIXME: listing of options this app accepts.
+...
 
 ## Examples
 
@@ -28,21 +26,21 @@ FIXME: listing of options this app accepts.
 
 ...
 
-### Any Other Sections
-### That You Think
-### Might be Useful
-
 ## Credits
 
-The original developer of the App Engine Magic library is: <a href="https://github.com/gcv">Constantine Vetoshev</a> &#124
-                
-- 'AE' image by [bluekdesign]("http://www.flickr.com/photos/bluekdesign/")
-- 'M' image by [chelsea.parker.photo]("http://www.flickr.com/photos/chelseaparkerphotography/")
-- 'Test' image by [DaveBleasdale]("http://www.flickr.com/photos/sidelong/")
+The original developer of the App Engine Magic library is: <a href="https://github.com/gcv">Constantine Vetoshev</a>
+
+
+- ['AE']("http://www.flickr.com/photos/bluekdesign/2411545935/") image by [bluekdesign]("http://www.flickr.com/photos/bluekdesign/")
+- ['M']("http://www.flickr.com/photos/chelseaparkerphotography/6095087661/") image by [chelsea.parker.photo]("http://www.flickr.com/photos/chelseaparkerphotography/")
+- ['Test']("http://www.flickr.com/photos/sidelong/246816211/") image by [DaveBleasdale]("http://www.flickr.com/photos/sidelong/")
 
 
 ## License
 
-Copyright © 2013 Kevin Noonan
+Copyright © 2013 [Kevin Noonan]("http://twitter.com/kevin_noonan").
 
 Distributed under the Eclipse Public License, the same as Clojure.
+
+Source for site: [on Github]("https://github.com/FreeAgent/aem-test").
+                

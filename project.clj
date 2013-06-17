@@ -4,17 +4,18 @@
   :url "http://aem-test.appspot.com"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :jvm-opts ["-Dphantomjs.binary.path=/usr/local/phantomjs-1.9.0-macosx/bin/phantomjs"]
   :repl-options {:port 4005
                  :init (do
                          (require '[appengine-magic.core :as ae])
-                         (load-file "src/aem-test/request.clj")
+                         (load-file "src/aem_test/request.clj")
                          (defn request []
-                           (do (load-file "src/aem-test/request.clj")
-                               (ae/serve aem-test.request/aem-test-request)))
-                         (load-file "src/aem-test/user.clj")
+                           (do (load-file "src/aem_test/request.clj")
+                               (ae/serve aem_test.request/aem_test_request)))
+                         (load-file "src/aem_test/user.clj")
                          (defn user []
-                           (do (load-file "src/aem-test/user.clj")
-                               (ae/serve aem-test.user/aem-test-user)))
+                           (do (load-file "src/aem_test/user.clj")
+                               (ae/serve aem_test.user/aem_test_user)))
                          (user))}
   :gae-sdk "/usr/local/appengine-java-sdk"
   :gae-app {:id "aem-test"
@@ -23,12 +24,12 @@
                        :test "0-1-0"
                        :prod "0-1-0"}
             :servlets [{:name "aem-test", :class "request",
-                       :services [{:svcname "request" :url-pattern  "/request/*"}
+                       :services [{:svcname "request" :url-pattern  "/*"}
                                   ]}
-                       {:name "aem-test", :class "user",
-                       :services [{:svcname "user" :url-pattern  "/user/*"}
-                                  {:svcname "login" :url-pattern  "/_ah/login_required"}
-                                  ]}
+                       ;{:name "aem-test", :class "user",
+                       ;:services [{:svcname "user" :url-pattern  "/user/*"}
+                       ;          {:svcname "login" :url-pattern  "/_ah/login_required"}
+                       ;           ]}
                        ]
             :war "war"
             :display-name "aem-test"
@@ -53,7 +54,7 @@
                         ;; :exclude {:pattern "bar/**"}
                         }
             }
-  :aot [aem-test.request aem-test.user  *]
+  :aot [aem-test.request aem-test.user aem-test.base *]
   :compile-path "war/WEB-INF/classes"
   :target-path "war/WEB-INF/lib"
   :uberjar-exclusions [#"META-INF/DUMMY.SF"
@@ -68,7 +69,12 @@
                  [ring/ring-core "1.1.8"]
                  [ring/ring-devel "1.1.8"]
                  [enlive "1.1.1"]
-                 [org.clojars.wjlroe/kerodon "0.0.7-SNAPSHOT"]
-                 [org.clojure/tools.logging "0.2.3"]]
-  :profiles {:dev {:dependencies [[appengine-magic "0.5.1-CANDIDATE-1"]]}}
-  :plugins [[gaem "0.2.0-SNAPSHOT"]])
+                 
+                 ; next three are for testing
+                 [clj-webdriver "0.6.0"]
+                 [org.apache.httpcomponents/httpcore "4.2.3"] ; reqd for Selenium 2.28
+                 [com.github.detro.ghostdriver/phantomjsdriver "1.0.1"] 
+
+                 [org.clojure/tools.logging "0.2.6"]]
+  :profiles {:dev {:dependencies [[appengine-magic "0.6.0"]]}}
+  :plugins [[gaem "0.2.1-SNAPSHOT"]])
